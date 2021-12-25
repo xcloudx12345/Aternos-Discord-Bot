@@ -7,7 +7,7 @@ from discord.ext import commands, tasks
 headers_cookie = "ATERNOS_SEC_dpxjofznh7g00000=so8f6xmbeg000000; ATERNOS_LANGUAGE=vi; _ga=GA1.2.1312348077.1640397815; _gid=GA1.2.1121790510.1640397815; _pbjs_userid_consent_data=3524755945110770; _lr_env_src_ats=false; __gads=ID=8302d1106d2589c3-2295edb284cf00f2:T=1640397818:S=ALNI_MZNgB-u30d8gEqRh9yAky3dgXwKfQ; cto_bundle=6E8VAV9ZaTclMkJpZCUyRmsxVGxDJTJGcGx0RnpwMXlnS3BldmdHJTJCSXFzUWNGM3F1b25EVUZ3WVNsa1Q1azhkNXNraGRxUk55NmE1TzRwRzRlMWN6V1o4YmgzYmNJRjJKVnVRVCUyQmNCJTJGTXkzTW02eWF2emFIZkN5azVoTjBNZ3RlJTJCVE9LV1BhazJ3RDVCUyUy…t%2C%2025%20Dec%202021%2005%3A56%3A35%20GMT; _cc_id=6f35d5e59e306afa0e34553b0d1e8b4e; _pubcid_sharedid=01FQQNC3M78X9KGRXF8MWECKWB; _lr_retry_request=true; _gat=1; __cf_bm=roq.sDD_aeRldBR6YgCgwQH3jh2Wn6D9.xOtPHYGuXE-1640420955-0-AXU45i4FR3KfunN0bzqe0IUJ4aa2Irq3LTRvvokVaTw+pngOtSoHtX235Er6UGMdYTEi7qztTWjdQOSJay7UYcqKDVldtbRDeCAgvmvwVjYW+suKPOhk7Ld3XKjEZIp1hQ==; ATERNOS_SESSION=IC6BCH07JmhUlZakAwZ0vwWeQxpNPrjGiUCZCkkgeP7zfjNKAN8lz9vuDKoWg3v6Z1S4rL2hMu7svIw3UEJ2gMASD542pNZpBmPK; ATERNOS_SERVER=NpAiwwd2rk4EBV36"
 TOKEN = "wIoQFiuGXhKgQ6rmEkRX"
 server = AternosAPI(headers_cookie, TOKEN, timeout=10)
-DISCORD = os.environ['DISCORD_TOKEN']
+DISCORD = os.getenv("DISCORD_TOKEN")
 
 client = commands.Bot(command_prefix = ["-"])
 client.remove_command('help')
