@@ -9,7 +9,7 @@ class AternosAPI():
         self.timeout = timeout
         self.headers = {}
         self.TOKEN = TOKEN
-        self.headers['User-Agent'] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0"
+        self.headers['User-Agent'] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0"
         self.headers['Cookie'] = headers
         self.SEC = self.getSEC()
         self.JavaSoftwares = ['Vanilla', 'Spigot', 'Forge', 'Magma','Snapshot', 'Bukkit', 'Paper', 'Modpacks', 'Glowstone']
@@ -71,7 +71,7 @@ class AternosAPI():
             parameters = {}
             parameters['SEC'] = self.SEC
             parameters['TOKEN'] = self.TOKEN
-            stopserver = self.filterCloudflare(url=f"https://aternos.org/panel/ajax/stop.php", params=parameters, headers=self.headers)
+            stopserver = self.filterCloudflare(url="https://aternos.org/panel/ajax/stop.php", params=parameters, headers=self.headers)
             return "Server Stopped"
 
     def GetServerInfo(self):
