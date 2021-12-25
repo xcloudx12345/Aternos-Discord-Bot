@@ -28,7 +28,7 @@ async def on_ready():
 
 @client.command()
 async def help(ctx):
-     embed = discord.Embed(title="Current Commands", description="By Laxion", color=0x00ff00)
+    embed = discord.Embed(title="Current Commands", description="By Laxion", color=0x00ff00)
     embed.add_field(name="start", value="Starts the server.", inline=True)
     embed.add_field(name="stop", value="Stops the server.", inline=True)
     embed.add_field(name="status", value="Shows the current status of the server.", inline=True)
