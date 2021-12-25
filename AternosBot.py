@@ -28,26 +28,26 @@ async def on_ready():
 
 @client.command()
 async def help(ctx):
-    embed = discord.Embed(title="Current Commands", description="By Laxion", color=0x00ff00)
-    embed.add_field(name="start", value="Mở server.", inline=True)
-    embed.add_field(name="stop", value="Tắt server.", inline=True)
-    embed.add_field(name="status", value="Xem tình trạng server.", inline=True)
-    embed.add_field(name="info", value="Thông tin server.", inline=True)
-    embed.add_field(name="players", value="Xem số lượng người chơi.", inline=True)
+     embed = discord.Embed(title="Current Commands", description="By Laxion", color=0x00ff00)
+    embed.add_field(name="start", value="Starts the server.", inline=True)
+    embed.add_field(name="stop", value="Stops the server.", inline=True)
+    embed.add_field(name="status", value="Shows the current status of the server.", inline=True)
+    embed.add_field(name="info", value="Shows server information.", inline=True)
+    embed.add_field(name="players", value="Shows players information.", inline=True)
     await ctx.send(embed = embed)
 
 @client.command()
 async def start(ctx):
     status = str(server.GetStatus())
     if (status == "Offline"):
-        await ctx.send("Đang bắt đầu...")
+        await ctx.send("Starting...")
         await cmd("start", ctx)
     else:
-        await ctx.send("Server đang khởi động/đã chạy!")
+        await ctx.send("Server is already starting/started!")
 
 @client.command()
 async def stop(ctx):
-    await ctx.send("Đang tắt...")
+    await ctx.send("Stopping...")
     await cmd("stop", ctx)
 
 @client.command()
@@ -62,7 +62,7 @@ async def status(ctx):
 async def players(ctx):
     z = server.GetPlayerInfo()
     if (len(z) == 0):
-        await ctx.send("Không có ai online.")
+        await ctx.send("No players online.")
         return
     for i in range(len(z)):
         await ctx.send(z[i])     
