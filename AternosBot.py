@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands, tasks
 
 headers_cookie = "COOKIE"
-TOKEN = "TOKEN"
+TOKEN = "hKXn1P1djKuxSS4KApWCReL3cOE0geM2GaHtmNCJLr28b0fJJ7xoY2v5RXqEPBPxiIqtJUSWVPZmx75AI8HQdtjSVZI9BJIG1L9V"
 server = AternosAPI(headers_cookie, TOKEN, timeout=10)
 
 client = commands.Bot(command_prefix = ["-"])
@@ -65,4 +65,4 @@ async def players(ctx):
     for i in range(len(z)):
         await ctx.send(z[i])
         
-client.run("DISCORD BOT TOKEN")
+client.run("OTI0MDAxNDYyMDg0ODQ5Njg0.YcYNaw.E7qYS4IFk_GSls2q4Q0LHD0OURI")
