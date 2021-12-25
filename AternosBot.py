@@ -1,5 +1,4 @@
 import os
-from keep_alive import keep_alive
 from aternosapi import AternosAPI
 import discord
 from discord.ext import commands, tasks
@@ -66,6 +65,5 @@ async def players(ctx):
         await ctx.send("Không có ai online.")
         return
     for i in range(len(z)):
-        await ctx.send(z[i])
-keep_alive()  # Starts a webserver to be pinged.        
+        await ctx.send(z[i])     
 client.run(DISCORD)
